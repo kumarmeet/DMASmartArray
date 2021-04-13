@@ -17,6 +17,17 @@ int isEmpty(SmartArray *arr);
 int isFull(SmartArray *arr);
 int countItems(SmartArray *arr);
 void searchItem(SmartArray *arr, int value);
+void editItem(SmartArray *arr, int index, int value);
+
+void editItem(SmartArray *arr, int index, int value)
+{
+  if(index < 0 || index > arr->last_index)
+    printf("\nInvalid Index");
+  else
+  {
+    arr->ptr[index] = value;
+  }
+}
 
 void searchItem(SmartArray *arr, int value)
 {
